@@ -1,0 +1,47 @@
+/* Make sure to hide your sprite! */
+.hide {
+	display: none;
+}
+
+/* Default colouration & size */
+.easy-as-svg-icon {
+	fill: $color__primary;
+	height: 28px;
+	width: 28px;
+}
+
+/* Social menu */
+.menu-social-menu-container ul {
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	li {
+		display: inline-block;
+	}
+
+	a {
+		display: inline-block;
+		line-height: 1;
+		padding: 4px;
+	}
+
+	svg {
+		fill: $color__link;
+		height: 28px;
+		speak: none;
+		transition: fill .1s ease-in 0;
+		width: 28px;
+	}
+
+	a:hover {
+		background: none;
+
+		svg {
+			fill: $color__link-hover;
+		}
+	}
+}
