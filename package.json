@@ -1,0 +1,24 @@
+{
+  "name": "easy-as-svg",
+  "version": "1.0.0",
+  "description": "Automatically generate an SVG sprite for use in WordPress projects.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarahmonster/easy-as-svg.git"
+  },
+  "author": "sarah semark",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/sarahmonster/easy-as-svg/issues"
+  },
+  "homepage": "https://github.com/sarahmonster/easy-as-svg#readme",
+  "devDependencies": {
+    "gulp-cheerio": "^0.6.2",
+    "gulp-svgmin": "^1.2.2",
+    "gulp-svgstore": "^6.0.0"
+  }
+}
