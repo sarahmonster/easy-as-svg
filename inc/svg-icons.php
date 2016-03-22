@@ -124,8 +124,9 @@ function easy_as_svg_social_menu( $items ) {
 		$feed_pattern = '/\/feed\/?/i';
 		$mail_pattern = '/mailto/i';
 		$skype_pattern = '/skype/i';
+		$google_pattern = '/plus.google.com/i';
 		$domain_pattern = '/([a-z]*)(\.com|\.org|\.io|\.tv|\.co)/i';
-		$domains = array( 'codepen', 'digg', 'dribbble', 'dropbox', 'facebook', 'flickr', 'foursquare', 'github', 'plus.google', 'instagram', 'linkedin', 'path', 'pinterest', 'getpocket', 'polldaddy', 'reddit', 'spotify', 'stumbleupon', 'tumblr', 'twitch', 'twitter', 'vimeo', 'vine', 'youtube' );
+		$domains = array( 'codepen', 'digg', 'dribbble', 'dropbox', 'facebook', 'flickr', 'foursquare', 'github', 'instagram', 'linkedin', 'path', 'pinterest', 'getpocket', 'polldaddy', 'reddit', 'spotify', 'stumbleupon', 'tumblr', 'twitch', 'twitter', 'vimeo', 'vine', 'youtube' );
 
 		// Match feed URLs
 		if ( preg_match( $feed_pattern, $subject, $matches ) ) :
@@ -136,6 +137,9 @@ function easy_as_svg_social_menu( $items ) {
 		// Match a Skype link
 		elseif ( preg_match( $skype_pattern, $subject, $matches ) ) :
 			$icon = easy_as_svg_get_icon( 'skype' );
+		// Match a Google+ link
+		elseif ( preg_match( $google_pattern, $subject, $matches ) ) :
+			$icon = easy_as_svg_get_icon( 'google-plus' );
 		// Match various domains
 		elseif ( preg_match( $domain_pattern, $subject, $matches ) && in_array( $matches[1], $domains ) ) :
 			$icon = easy_as_svg_get_icon( $matches[1] );
