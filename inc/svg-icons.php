@@ -163,7 +163,7 @@ function easy_as_svg_svg_shortcode( $atts, $content = null ) {
 	$a = shortcode_atts( array(
     'file' => '',
 	), $atts );
-	$file = get_template_directory_uri() . '/assets/svg/'.$atts['file'].'.svg';
+	$file = get_template_directory_uri() . '/assets/svg/'.$a['file'].'.svg';
 	if ( function_exists( 'wpcom_is_vip' ) ) :
 		return wpcom_vip_file_get_contents( esc_url( $file ) );
 	else :
@@ -182,6 +182,6 @@ function easy_as_svg_svg_icon_shortcode( $atts, $content = null ) {
     'name' => '',
 	 'id'   => '',
 	), $atts );
-	return easy_as_svg_get_icon( $atts['name'], $atts['id'] );
+	return easy_as_svg_get_icon( $a['name'], $a['id'] );
 }
 add_shortcode( 'svg-icon', 'easy_as_svg_svg_icon_shortcode' );
